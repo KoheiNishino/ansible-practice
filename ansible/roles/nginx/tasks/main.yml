@@ -2,7 +2,7 @@
 - name: Install nginx
   become: yes
   yum:
-    name: http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+    name: "{{ nginx_download_url }}"
     state: present
     lock_timeout: 180
 
