@@ -1,0 +1,9 @@
+---
+- name: Playbook for Production.
+  hosts: production
+  become: yes
+  tasks:
+    - name: Install Git
+      yum:
+        name: git
+        state: present
